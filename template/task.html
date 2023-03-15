@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Task</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="task">
+            <h1>Task</h1>
+            <form action="/result" method="post">
+                <input type="text" name="years" placeholder="Enter Year">
+                <input type="submit" name="submit" value="Submit">
+            </form>
+            {% if result %}
+            <h2>Salary: {{result}}</h2>
+            {% endif %}
+        </div>
+    </div>
+
+</html>
