@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+
+    stages {
+        stage('Building image'){
+            steps {
+                bat "docker build -t testing ."
+            }
+            
+        }
+        stage('Running container'){
+            steps {
+                bat "docker run --rm testing"
+            }
+        }
+    }
+}
